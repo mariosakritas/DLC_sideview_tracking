@@ -22,19 +22,18 @@ uses x,y positions to compute 2D displacement per frame change
 #Some extra functions are provided to compute a video's brightness and adjust the gamma value is it's outside a selected range
 
 
-```
 This should create a pupil data file (e.g., `rpi_camera_2_pupil_data.npy`) in each directory that contains a h264 video file recorded using a Raspberry PI camera (unless it was excluded when calling `analyze`). How to read the data:  
 ```
 import numpy as np
-
 data = np.load('rpi_camera_2_pupil_data.npy').item()
-
 video_ts = data['timestamps']  # video time stamps aligned to the neural data (in seconds)
 pupil_size_pix = data['pupil_size_pix']  # the length of the larger ellipse axis in pixels
+```
 
 
 
-
-Reference:
+# Reference:
+```
 Mathis, A., Mamidanna, P., Cury, K.M. et al. DeepLabCut: markerless pose estimation of user-defined body parts with deep learning. Nat Neurosci 21, 1281–1289 (2018). https://doi.org/10.1038/s41593-018-0209-y
+```
 
