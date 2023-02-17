@@ -257,10 +257,11 @@ def convert_dlc_to_npy_files(path,
 def compute_2D_movement(path, overwrite=False,
                               outlier_threshold=[15., 8., 8.]):
 
-    import cv2
-    import matplotlib.pyplot as plt
-    import tqdm
-
+    '''
+    function which uses x,y positions to derive 2D movement
+    outlier threesholds are values which indicate the maximum changee which is allowed per frame
+    given the naturee of each bodypart being tracked 
+    '''
     for root, dirs, _ in os.walk(path):
 
         files = glob.glob(op.join(root, 'rpi_camera_*_side_view_data.npy'))
