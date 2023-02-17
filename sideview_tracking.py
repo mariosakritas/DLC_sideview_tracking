@@ -260,7 +260,7 @@ def compute_2D_movement(path, overwrite=False,
     '''
     function which uses x,y positions to derive 2D movement
     outlier threesholds are values which indicate the maximum changee which is allowed per frame
-    given the naturee of each bodypart being tracked 
+    given the naturee of each bodypart being tracked
     '''
     for root, dirs, _ in os.walk(path):
 
